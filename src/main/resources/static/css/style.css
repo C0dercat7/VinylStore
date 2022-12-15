@@ -1,0 +1,685 @@
+ @font-face {
+    font-family: 'TT Limes Slab';
+    src: url('fonts/TTLimesSlab-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  html {
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  }
+
+  body {
+  background-image: url("images/background.jpg");
+  background-size: 105%;
+  background-color: black;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+                  "header"
+                  "nav"
+                  "icons"
+                  "cont"
+                  "footer";
+  grid-template-rows: 15rem 4rem 7rem 1fr 7rem;
+  grid-template-columns: 100%;
+  grid-gap: 15px;
+  justify-items: stretch;
+  font-size: 20px;
+  font-family: 'TT Limes Slab';
+  color: lightgray;
+}
+
+h3 {
+  font-size: 25px;
+  font-family: 'TT Limes Slab';
+  color: lightgray;
+  float:  left;
+  vertical-align: sub;
+}
+
+p {
+  font-size: 18px;
+  font-family: 'TT Limes Slab';
+  color: lightgray;
+}
+
+header {
+  grid-area: header;
+  width: inherit;
+  height: inherit;
+  position: relative;
+  padding-bottom: 2%;
+  padding-top: 0;
+  margin: 0;
+  background-color: gray;
+  background-position: stick;
+  background-image: url("images/header.jpg");
+  Background-size: 100%;
+  background-color: rgba(0, 0, 0, 0.0);
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+#icons {
+  grid-area: icons;
+}
+
+.cont {
+  grid-area: cont;
+  width:  90%;
+  height:  100%;
+  margin-left: 7%;
+  padding-bottom: 1%;
+  padding-top: 3%;
+}
+
+footer {
+  grid-area: footer;
+  width: 100%;
+  margin-top: 2%;
+  height: 90px;
+  position: static;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 65%;
+
+  padding-left: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+ul.list {
+  grid-area: nav;
+  position: static;
+  margin: 0; 
+  padding: 4px; 
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 0.9%;
+  z-index: 15;
+}
+
+ul.list li {
+  display: inline; 
+  margin-right: 5px; 
+}
+
+.list:after {
+    clear: both;
+}
+
+.home {
+ background-image: url("buttons/home_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+}
+
+.home:hover {
+ background-image: url("buttons/home_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;;
+ cursor: pointer;
+}
+
+.dropdown-rock {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content-rock {
+    display: none;
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    z-index: 1;
+}
+
+.dropdown-content-rock a {
+  color: black;
+  padding: 0;
+  margin: 0;
+  display: block;
+  background-color: black;
+  cursor: pointer;
+}
+
+.dropdown-content-rock a:hover {background-color: black;}
+.dropdown-rock:hover .dropdown-content-rock {display: block;}
+.dropdown-rock:hover .dropbtn-rock { background-image: url("buttons/rock_on.jpg")}
+
+.dropbtn-rock {
+  background-image: url("buttons/rock_off.jpg");
+  background-size: 100%;
+  width: 150px;
+ height: 45px;
+}
+
+.alt {
+ background-image: url("buttons/alt_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+}
+
+.alt:hover {
+ background-image: url("buttons/alt_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+ cursor: pointer;
+}
+
+.classic {
+ background-image: url("buttons/classic_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+}
+
+.classic:hover {
+ background-image: url("buttons/classic_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+ cursor: pointer;
+}
+
+.folk {
+ background-image: url("buttons/folk_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+}
+
+.folk:hover {
+ background-image: url("buttons/folk_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+ cursor: pointer;
+}
+
+.punk {
+ background-image: url("buttons/punk_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+}
+
+.punk:hover {
+ background-image: url("buttons/punk_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+ cursor: pointer;
+}
+
+.dropdown-metal {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content-metal {
+    display: none;
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    z-index: 1;
+}
+
+.dropdown-content-metal a {
+  color: black;
+  padding: 0;
+  margin: 0;
+  display: block;
+  background-color: black;
+  cursor: pointer;
+}
+
+.dropdown-content-metal a:hover {background-color: black;}
+.dropdown-metal:hover .dropdown-content-metal {display: block;}
+.dropdown-metal:hover .dropbtn-metal { background-image: url("buttons/metal_on.jpg")}
+
+.dropbtn-metal {
+  background-image: url("buttons/metal_off.jpg");
+  background-size: 100%;
+  width: 150px;
+ height: 45px;
+}
+
+.black {
+ background-image: url("buttons/black_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+}
+
+.black:hover {
+ background-image: url("buttons/black_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+ cursor: pointer;
+}
+
+.heavy {
+ background-image: url("buttons/heavy_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+}
+
+.heavy:hover {
+ background-image: url("buttons/heavy_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+ cursor: pointer;
+}
+
+.prog {
+ background-image: url("buttons/prog_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+}
+
+.prog:hover {
+ background-image: url("buttons/prog_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+ cursor: pointer;
+}
+
+.gothic {
+ background-image: url("buttons/gothic_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+}
+
+.gothic:hover {
+ background-image: url("buttons/gothic_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+ cursor: pointer;
+}
+
+.jazz {
+ background-image: url("buttons/jazz_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+}
+
+.jazz:hover {
+ background-image: url("buttons/jazz_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+ cursor: pointer;
+}
+
+.pop {
+ background-image: url("buttons/pop_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+}
+
+.pop:hover {
+ background-image: url("buttons/pop_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+ cursor: pointer;
+}
+
+.hip {
+ background-image: url("buttons/hiphop_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+}
+
+.hip:hover {
+ background-image: url("buttons/hiphop_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+ cursor: pointer;
+}
+
+.electro {
+ background-image: url("buttons/electro_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+}
+
+.electro:hover {
+ background-image: url("buttons/electro_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 150px;
+ height: 45px;
+ cursor: pointer;
+}
+
+form.search {
+  width: 50%;
+  height: 10%;
+  padding-left: 10%;
+  padding-bottom: 10%;
+  padding-top: 5%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+input[type=search] {
+  padding-top:inherit;
+  border:1px solid black;
+  border-radius:7px;
+  color: silver;
+  width: 15%;
+  height: 25px;
+}
+
+.go {
+  appearance:none;
+  -webkit-appearance:none;
+  border:none;
+  background-image: url("buttons/empty_off.jpg");
+  background-size: 100%;
+  background-color:black;
+  color:lightgray;
+  font-size:15px;
+  border-radius:5px;
+  width:5%;
+  height: 25px;
+  display: inline;
+  padding-top:inherit;
+  text-shadow: 5px 5px 25px black;
+    border:1px solid black;
+}
+
+.go:hover {
+
+  appearance:none;
+  -webkit-appearance:none;
+  border:none;
+  background-image: url("buttons/empty_on.jpg");
+  background-size: 100%;
+  background-color:black;
+  color:white;
+  font-size:15px;
+  border-radius:5px;
+  width: 1100px;
+  height: 25px;
+  display: inline;
+  padding-top:inherit;
+  text-shadow: 5px 5px 25px black;
+    border:1px solid black;
+    cursor:  pointer;
+}
+
+
+form.regis {
+  width:55%;
+  height: 45%;
+  position: static;
+  margin-bottom: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 10%;
+  padding-bottom:  5%;
+  margin-left: 5%;
+}
+
+::-webkit-input-placeholder { 
+   color:    #ghostwhite;
+}
+
+.username {
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    margin: 0.5%;
+    text-align: center;
+  }
+ input:focus{
+     color: grey;
+ }
+
+.fio {
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  margin: 0.5%;
+  text-align:  center;
+}
+
+.phone {
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  margin: 0.5%;
+  text-align:  center;
+}
+
+.mail {
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  margin: 0.5%;
+  text-align:  center;
+}
+
+.pass {
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  margin: 0.5%;
+  text-align:  center;
+}
+
+.reg {
+  margin-top: 0;
+  padding-left: 2%;
+  margin-left: 45%;
+  background-image: url("buttons/empty_off.jpg");
+  Background-size: cover;
+  height: 40px;
+  width:  150px;
+}
+
+.reg:hover {
+  margin-top: 0;
+  padding-left: 2%;
+  margin-left: 45%;
+  background-image: url("buttons/empty_on.jpg");
+  Background-size: cover;
+  height: 40px;
+  width:  150px;
+  cursor: pointer;
+}
+
+#icons {
+  display:  inline;  
+}
+
+.icon {
+  width:  45px;
+  margin-right: 3%;
+  float: right;
+}
+
+.icon:hover {
+  background-image: url("images/00.png");
+}
+
+.good {
+  padding-right: 2%;
+  padding-bottom: 7%;
+  padding-left:  7%;
+}
+
+.zakaz {
+    background-image: url("buttons/empty_off.jpg");
+    Background-size: cover;
+    height: 40px;
+    width:  150px;
+    margin-bottom: 0;
+}
+
+.tab {
+    margin-left: 45%;
+}
+
+ img.rot {
+     margin-left: 7%;
+     animation: 5s linear 0s normal none infinite running rot;
+     -webkit-animation: 5s linear 0s normal none infinite running rot;
+     width: 170px;
+     z-index: 100;
+ }
+ @keyframes rot {
+     0% {
+         transform: rotate(0deg);
+     }
+     100% {
+         transform: rotate(360deg);
+     }
+ }
+ @-webkit-keyframes rot {
+     0% {
+         transform: rotate(0deg);
+     }
+     100% {
+         transform: rotate(360deg);
+     }
+ }
+
+ .carousel {
+     position: relative;
+     width: 1000px;
+     padding: 5px 40px;
+     border: 1px solid black;
+     border-radius: 15px;
+     background: black;
+     margin-left: 0;
+ }
+
+ .carousel img {
+     width: 100%;
+
+     display: block;
+ }
+
+ .arrow {
+     position: absolute;
+     top: 60px;
+     padding: 0;
+     background: black;
+     border-radius: 15px;
+     border: 1px solid gray;
+     font-size: 24px;
+     line-height: 24px;
+     color: #CCCCCC;
+     display: block;
+ }
+
+ .arrow:focus {
+     outline: none;
+ }
+
+ .arrow:hover {
+     background: black;
+     cursor: pointer;
+ }
+
+ .prev {
+     left: 7px;
+ }
+
+ .next {
+     right: 7px;
+ }
+
+ .gallery {
+     width: 99%;
+     overflow: hidden;
+ }
+
+ .gallery ul {
+     width: 9999px;
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     transition: margin-left 250ms;
+     font-size: 0;
+ }
+
+ .gallery li {
+     display: inline-block;
+ }

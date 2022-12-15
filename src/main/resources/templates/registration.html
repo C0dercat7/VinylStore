@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon" />
+  <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" type="text/css" media="all">
+  <link href="../static/css/style-resp.css"th:href="@{/css/style-resp.css}" rel="stylesheet" type="text/css">
+  <title> Регистрация </title>
+  <meta name="description" content="Интернет-магазин виниловых пластинок" />
+</head>
+<body>
+<header>
+  <form id="search">
+    <p> Введите название исполнителя или альбома </p>
+    <input type="search" name="q" placeholder="Search">
+    <input type="submit" value="Go!">
+  </form>
+</header>
+
+<ul class="list">
+  <li><a href="index.html"><input type="button" class="home"></a> </li>
+  <li> <div class="dropdown-rock">
+    <input type="button" class="dropbtn-rock">
+    <div class="dropdown-content-rock">
+      <a href="vinyl/alt.html"> <input type="button" class="alt"> </a>
+      <a href="vinyl/classic.html"><input type="button" class="classic"></a>
+      <a href="vinyl/punk.html"><input type="button" class="punk"></a>
+      <a href="vinyl/folk.html"><input type="button" class="folk"></a>
+    </div>
+  </div></li>
+  <li> <div class="dropdown-metal">
+    <input type="button" class="dropbtn-metal">
+    <div class="dropdown-content-metal">
+      <a href="vinyl/heavy.html"> <input type="button" class="heavy"> </a>
+      <a href="vinyl/black.html"><input type="button" class="black"></a>
+      <a href="vinyl/gothic.html"><input type="button" class="gothic"></a>
+      <a href="vinyl/prog.html"><input type="button" class="prog"></a>
+    </div> </div> </li>
+  <li><a href="vinyl/jazz.html"><input type="button" class="jazz"></a> </li>
+  <li><a href="vinyl/hip.html"><input type="button" class="hip"></a> </li>
+  <li><a href="vinyl/pop.html"><input type="button" class="pop"></a> </li>
+  <li><a href="vinyl/electro.html"><input type="button" class="electro"></a> <li>
+</ul>
+
+<div class="cont">
+<form method="post" th:action="@{/auth/registration}" th:object="${person}" class="regis">
+  <input type="text"  th:field="*{login}" placeholder="Введите пароль" name="username" id="login" class="username">
+  <div style="color: red" th:if="${#fields.hasErrors('login')}" th:errors="*{login}"></div>
+  <input type="text" class="fio" name="fio" placeholder="ФИО"><br>
+  <input type="text" class="phone" name="phone" placeholder="Телефон"><br>
+  <input type="email" placeholder="Email" class="mail">
+  <input type="password" th:field="*{password}" placeholder="Введите пароль" name="password" id="password" class="pass">
+  <div style="color: red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+  <br>
+  <a href="/auth"><input type="submit" value="Зарегистрироваться" class="reg"></a>
+</form>
+</div>
+
+<footer> Магазин виниловых пластинок <br> Velvet Sound <br> г. Санкт-Петербург <br> 2022 </footer>
+
+</body>
+</html>

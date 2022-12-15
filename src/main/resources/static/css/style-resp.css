@@ -1,0 +1,549 @@
+@media only screen and (max-width: 600px) {
+	body {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-color: black;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+                  "header"
+                  "nav"
+                  "icons"
+                  "cont"
+                  "footer";
+  grid-template-rows: 3rem 7rem 5rem 1fr 3rem; 
+  grid-template-columns: 1fr;
+  grid-gap: 8px;
+  justify-items: stretch;
+  font-size: 12px;
+  font-family: 'TT Limes Slab';
+  color: lightgray;
+}
+
+header {
+  grid-area: header;
+  width: inherit;
+  height: inherit;
+  position: relative;
+  padding-bottom: 2%;
+  padding-top: 0;
+  margin: 0;
+  background-color: gray;
+  background-position: stick;
+  background-image: url("../images/header.jpg");
+  Background-size: 100%;
+  background-color: rgba(0, 0, 0, 0.0);
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.home {
+ background-image: url("../buttons/home_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+}
+
+.home:hover {
+ background-image: url("../buttons/home_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+  width: 95px;
+ height: 30px;
+ cursor: pointer;
+}
+
+.dropdown-rock {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content-rock {
+    display: none;
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    z-index: 1;
+}
+
+.dropdown-content-rock a {
+  color: black;
+  padding: 0;
+  margin: 0;
+  display: block;
+  background-color: black;
+  cursor: pointer;
+}
+
+.dropdown-content-rock a:hover {background-color: black;}
+.dropdown-rock:hover .dropdown-content-rock {display: block;}
+.dropdown-rock:hover .dropbtn-rock { background-image: url("../buttons/rock_on.jpg")}
+
+.dropbtn-rock {
+  background-image: url("../buttons/rock_off.jpg");
+  background-size: 100%;
+  width: 95px;
+  height: 30px;
+}
+
+.alt {
+ background-image: url("../buttons/alt_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+}
+
+.alt:hover {
+ background-image: url("../buttons/alt_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+ cursor: pointer;
+}
+
+.classic {
+ background-image: url("../buttons/classic_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+}
+
+.classic:hover {
+ background-image: url("../buttons/classic_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+ cursor: pointer;
+}
+
+.folk {
+ background-image: url("../buttons/folk_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+}
+
+.folk:hover {
+ background-image: url("../buttons/folk_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+ cursor: pointer;
+}
+
+.punk {
+ background-image: url("../buttons/punk_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+}
+
+.punk:hover {
+ background-image: url("../buttons/punk_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+ cursor: pointer;
+}
+
+.dropdown-metal {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content-metal {
+    display: none;
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    z-index: 1;
+}
+
+.dropdown-content-metal a {
+  color: black;
+  padding: 0;
+  margin: 0;
+  display: block;
+  background-color: black;
+  cursor: pointer;
+}
+
+.dropdown-content-metal a:hover {background-color: black;}
+.dropdown-metal:hover .dropdown-content-metal {display: block;}
+.dropdown-metal:hover .dropbtn-metal { background-image: url("../buttons/metal_on.jpg")}
+
+.dropbtn-metal {
+  background-image: url("../buttons/metal_off.jpg");
+  background-size: 100%;
+ width: 95px;
+ height: 30px;
+}
+
+.black {
+ background-image: url("../buttons/black_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+}
+
+.black:hover {
+ background-image: url("../buttons/black_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+ cursor: pointer;
+}
+
+.heavy {
+ background-image: url("../buttons/heavy_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+}
+
+.heavy:hover {
+ background-image: url("../buttons/heavy_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+ cursor: pointer;
+}
+
+.prog {
+ background-image: url("../buttons/prog_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+}
+
+.prog:hover {
+ background-image: url("../buttons/prog_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+ cursor: pointer;
+}
+
+.gothic {
+ background-image: url("../buttons/gothic_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+}
+
+.gothic:hover {
+ background-image: url("../buttons/gothic_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+ cursor: pointer;
+}
+
+.jazz {
+ background-image: url("../buttons/jazz_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+}
+
+.jazz:hover {
+ background-image: url("../buttons/jazz_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+ cursor: pointer;
+}
+
+.pop {
+ background-image: url("../buttons/pop_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+}
+
+.pop:hover {
+ background-image: url("../buttons/pop_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+ cursor: pointer;
+}
+
+.hip {
+ background-image: url("../buttons/hiphop_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+}
+
+.hip:hover {
+ background-image: url("../buttons/hiphop_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+ cursor: pointer;
+}
+
+.electro {
+ background-image: url("../buttons/electro_off.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+}
+
+.electro:hover {
+ background-image: url("../buttons/electro_on.jpg");
+ background-size: 100%;
+ padding: 0;
+ margin: 0;
+ width: 95px;
+ height: 30px;
+ cursor: pointer;
+}
+
+.cont {
+  grid-area: cont;
+  width:  100%;
+  height:  100%;
+  margin-left: 2%;
+  padding-bottom: 1%;
+  padding-top: 3%;
+  margin-right: 3%;
+}
+
+p {
+  font-size: 10px;
+  font-family: 'TT Limes Slab';
+  color: lightgray;
+}
+
+form.search {
+  width: 50%;
+  height: 10%;
+  padding-left: 10%;
+  padding-bottom: 10%;
+  padding-top: 1%;
+  margin-top: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+input[type=search] {
+  padding-top:inherit;
+  border:1px solid black;
+  border-radius:7px;
+  color: silver;
+  width: 12%;
+  height: 14px;
+  font-size: 10px;
+}
+
+input[type=submit] {
+
+  appearance:none;
+  -webkit-appearance:none;
+  border:none;
+  background-image: url("../buttons/empty_off.jpg");
+  background-size: 100%;
+  background-color:black;
+  color:lightgray;
+  font-size:15px;
+  border-radius:5px;
+  width:9%;
+  height: 17px;
+  display: inline;
+  padding-top:inherit;
+  text-shadow: 5px 5px 25px black;
+    border:1px solid black;
+}
+
+form.reg {
+  width:87%;
+  height: 85%;
+  position: static;
+  margin-bottom: 5%;
+  padding-bottom: 5%;
+  padding-left: 1%;
+  padding-right: 10%;
+  padding-botom:  5%;
+  margin-left: 1%;
+  border: none;
+
+}
+
+::-webkit-input-placeholder { 
+   color:    #ghostwhite;
+}
+
+#login {
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  margin: 0.5%;
+  text-align:  center;
+  
+}
+
+#fio {
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  margin: 0.5%;
+  text-align:  center;
+}
+
+#phone {
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  margin: 0.5%;
+  text-align:  center;
+}
+
+#mail {
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  margin: 0.5%;
+  text-align:  center;
+}
+
+#pass {
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  margin: 0.5%;
+  text-align:  center;
+}
+
+#reg {
+  margin-top: 1%;
+  padding-left: 8%;
+  margin-left: 20%;
+  background-image: url("../buttons/empty_off.jpg");
+  Background-size: cover;
+  height: 40px;
+  width:  150px;
+}
+
+#reg:hover {
+  margin-top: 1%;
+  padding-left: 8%;
+  margin-left: 20%;
+  background-image: url("../buttons/empty_on.jpg");
+  Background-size: cover;
+  height: 40px;
+  width:  150px;
+  cursor: pointer;
+}
+
+.basket {
+  padding:  2%;
+  padding-left: 30%;
+  margin-top:  0%;
+  width:  200px;
+  height: 70px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon {
+  width:  20px;
+}
+}
+
+@media only screen and (max-width: 850px) {
+	body {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-color: black;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 850px;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+                  "header"
+                  "nav"
+                  "icons"
+                  "cont"
+                  "footer";
+  grid-template-rows: 7rem 7rem 5rem 1fr 3rem; 
+  grid-template-columns: 1fr;
+  grid-gap: 8px;
+  justify-items: stretch;
+  font-size: 12px;
+  font-family: 'TT Limes Slab';
+  color: lightgray;
+}
+
+form.reg {
+  width:92%;
+  height: 85%;
+  position: static;
+  margin-bottom: 5%;
+  padding-bottom: 5%;
+  padding-left: 1%;
+  padding-right: 10%;
+  padding-botom:  5%;
+  margin-left: 1%;
+  border: none;
+
+}
+
+.icon {
+  width:  41px;
+}
+}

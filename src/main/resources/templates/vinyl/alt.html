@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="../../static/img/favicon.ico" type="image/x-icon" />
+      <link href="../../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" type="text/css" media="all">
+      <link href="../../static/css/style-resp.css"th:href="@{/css/style-resp.css}" rel="stylesheet" type="text/css">
+<title> Магазин виниловых пластинок Velvet Sound </title>
+<meta name="description" content="Интернет-магазин виниловых пластинок" />
+   </head>
+
+   <body>
+
+<header>
+      <form id="search">
+        <p> Введите название исполнителя или альбома </p>
+         <input type="search" name="q" placeholder="Search">
+         <input type="submit" value="Go!">
+      </form>
+</header>
+
+<ul class="list">
+        <li><a href="../index.html"><input type="button" class="home"></a> </li>
+        <li> <div class="dropdown-rock">
+  <input type="button" class="dropbtn-rock">
+  <div class="dropdown-content-rock">
+    <a href="alt.html"> <input type="button" class="alt"> </a>
+    <a href="classic.html"><input type="button" class="classic"></a>
+    <a href="punk.html"><input type="button" class="punk"></a>
+    <a href="folk.html"><input type="button" class="folk"></a>
+  </div>
+</div></li>
+        <li> <div class="dropdown-metal">
+  <input type="button" class="dropbtn-metal">
+  <div class="dropdown-content-metal">
+    <a href="heavy.html"> <input type="button" class="heavy"> </a>
+    <a href="black.html"><input type="button" class="black"></a>
+    <a href="gothic.html"><input type="button" class="gothic"></a>
+    <a href="prog.html"><input type="button" class="prog"></a>
+  </div> </div> </li>
+        <li><a href="jazz.html"><input type="button" class="jazz"></a> </li>
+        <li><a href="hip.html"><input type="button" class="hip"></a> </li>
+        <li><a href="pop.html"><input type="button" class="pop"></a> </li>
+        <li><a href="electro.html"><input type="button" class="electro"></a> <li>
+</ul>
+
+<div id="icons">
+   <a href="../basket.html"><img src="../../static/img/basket01.png"  class="icon"></a>
+        <a href="../login.html"><img  src="../../static/img/log01.png" class="icon"></a>
+        <a href="../registration.html"><img src="../../static/img/reg01.png"  class="icon"></a>
+  </div> 
+
+<div class="cont">
+  <div class="goods">
+    <img src="../../static/img/disturbed.jpg" width="150px" class="good">
+    <img src="../../static/img/fallen.jpg" width="150px" class="good">
+    <img src="../../static/img/hybrid.jpg" width="150px" class="good">
+    <img src="../../static/img/meteora_linkin_park.jpg" width="150px" class="good">
+    <img src="../../static/img/nirvana-nevermind.jpg" width="150px" class="good">
+    <img src="../../static/img/rammstein__mutter.jpg" width="150px" class="good">
+    <img src="../../static/img/the_open_door.jpg" width="150px" class="good">
+    <img src="../../static/img/when_legends_rise.jpg" width="150px" class="good">
+  </div>
+</div>
+
+ <footer> Магазин виниловых пластинок <br> Velvet Sound <br> г. Санкт-Петербург <br> 2022 </footer>
+
+</body>
+</html>

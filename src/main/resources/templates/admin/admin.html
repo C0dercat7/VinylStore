@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../static/img/favicon.ico" type="image/x-icon" />
+    <link href="../../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" type="text/css" media="all">
+    <link href="../../static/css/style-resp.css"th:href="@{/css/style-resp.css}" rel="stylesheet" type="text/css">
+    <title> Личный кабинет администратора </title>
+    <meta name="description" content="Интернет-магазин виниловых пластинок" />
+</head>
+<body>
+<header>
+    <form id="search">
+        <p> Введите название исполнителя или альбома </p>
+        <input type="search" name="q" placeholder="Search">
+        <input type="submit" value="Go!">
+    </form>
+</header>
+
+<ul class="list">
+    <li><a href="index.html"><input type="button" class="home"></a> </li>
+    <li> <div class="dropdown-rock">
+        <input type="button" class="dropbtn-rock">
+        <div class="dropdown-content-rock">
+            <a href="../vinyl/alt.html"> <input type="button" class="alt"> </a>
+            <a href="../vinyl/classic.html"><input type="button" class="classic"></a>
+            <a href="../vinyl/punk.html"><input type="button" class="punk"></a>
+            <a href="../vinyl/folk.html"><input type="button" class="folk"></a>
+        </div>
+    </div></li>
+    <li> <div class="dropdown-metal">
+        <input type="button" class="dropbtn-metal">
+        <div class="dropdown-content-metal">
+            <a href="../vinyl/heavy.html"> <input type="button" class="heavy"> </a>
+            <a href="../vinyl/black.html"><input type="button" class="black"></a>
+            <a href="../vinyl/gothic.html"><input type="button" class="gothic"></a>
+            <a href="../vinyl/prog.html"><input type="button" class="prog"></a>
+        </div> </div> </li>
+    <li><a href="../vinyl/jazz.html"><input type="button" class="jazz"></a> </li>
+    <li><a href="../vinyl/hip.html"><input type="button" class="hip"></a> </li>
+    <li><a href="../vinyl/pop.html"><input type="button" class="pop"></a> </li>
+    <li><a href="../vinyl/electro.html"><input type="button" class="electro"></a> <li>
+</ul>
+
+<div class="cont">
+<h3>Личный кабинет администратора</h3>
+<form th:method="POST" th:action="@{/logout}">
+    <input type="submit" value="Выйти из личного кабинета" class="go">
+</form> <br>
+<a href="/admin/product/add">Добавить товар</a>
+<h3>Каталог товаров: </h3>
+<hr>
+<div th:each="product : ${products}">
+    <img th:src="'/img/' + ${product.imageList[0].getFileName()}" width="300px">
+    <p th:text="'Наименование: ' + ${product.getTitle()}"></p>
+    <p th:text="'Описание: ' + ${product.getDescription()}"></p>
+    <p th:text="'Цена: ' + ${product.getPrice()}"></p>
+    <p th:text="'Склад: ' + ${product.getWarehouse()}"></p>
+    <p th:text="'Продавец: ' + ${product.getSeller()}"></p>
+    <p th:text="'Категория товара: ' + ${product.getCategory().getName()}"></p>
+    <a th:href="@{/admin/product/edit/{id}(id=${product.getId()})}">Редактировать товар</a>
+    <a th:href="@{/admin/product/delete/{id}(id=${product.getId()})}">Удалить товар</a>
+    <hr>
+</div>
+</div>
+    <footer> Магазин виниловых пластинок <br> Velvet Sound <br> г. Санкт-Петербург <br> 2022 </footer>
+</body>
+</html>

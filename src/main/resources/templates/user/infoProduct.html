@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../static/img/favicon.ico" th:href="@{/img/favicon.ico}" type="image/x-icon" />
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" type="text/css" media="all">
+    <link th:href="@{/css/style-resp.css}" rel="stylesheet" type="text/css">
+    <title> Инфо о товаре </title>
+    <meta name="description" content="Интернет-магазин виниловых пластинок" />
+</head>
+
+<body>
+
+<header>
+    <form id="search">
+        <p> Введите название исполнителя или альбома </p>
+        <input type="search" name="q" placeholder="Search">
+        <input type="submit" value="Go!" class="go">
+    </form>
+</header>
+<body>
+<p th:text="'Наименование: ' + ${product.getTitle()}"></p>
+<p th:text="'Описание: ' + ${product.getDescription()}"></p>
+<p th:text="'Цена: ' + ${product.getPrice()}"></p>
+<p th:text="'Склад: ' + ${product.getWarehouse()}"></p>
+<p th:text="'Продавец: ' + ${product.getSeller()}"></p>
+<p th:text="'Категория: ' + ${product.getCategory().getName()}"></p>
+
+<div th:each="img : ${product.getImageList()}">
+    <img th:src="'/img/' + ${img.getFileName()}" width="300px">
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../static/img/favicon.ico" th:href="@{/img/favicon.ico}" type="image/x-icon" />
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" type="text/css" media="all">
+    <link th:href="@{/css/style-resp.css}" rel="stylesheet" type="text/css">
+    <title> Заказы </title>
+    <meta name="description" content="Интернет-магазин виниловых пластинок" />
+</head>
+
+<body>
+
+<header>
+    <form id="search">
+        <p> Введите название исполнителя или альбома </p>
+        <input type="search" name="q" placeholder="Search">
+        <input type="submit" value="Go!" class="go">
+    </form>
+</header>
+<body>
+<h3>Заказы</h3>
+<div th:each="order : ${orders}">
+    <h3 th:text="'Заказ № ' + ${order.getNumber()}"></h3>
+    <img th:src="'/img/' + ${order.getProduct().imageList[0].getFileName()}" width="300px">
+    <p th:text="'Наименование: ' + ${order.getProduct().getTitle()}"></p>
+    <p th:text="'Количество: ' + ${order.getCount()}"></p>
+    <p th:text="'Цена: ' + ${order.getPrice()}"></p>
+    <p th:text="'Дата заказа: ' + ${#temporals.format(order.getDateTime(), 'dd-MMM-yyyy')}"></p>
+    <p th:text="'Статус: ' + ${order.getStatus()}"></p>
+    <hr>
+</div>
+</body>
+</html>
